@@ -10,7 +10,7 @@
 ********************************************************************************/
 #ifndef _BINARY_TREE_H
 #define _BINARY_TREE_H
-#include <stdbool.h>
+#include <stdbool.h> /* For bool */
 typedef struct tree_node binary_tree, tree;
 struct tree_node {
     int data;

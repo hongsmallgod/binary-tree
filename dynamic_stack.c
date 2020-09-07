@@ -4,9 +4,9 @@
 *
 * @file  	dynaminc_stack.c
 * @author 	hongsmallgod
-* @version	V1.0.1
+* @version	V1.0.0
 * @data		2019-9-10 15:53:29
-* @brief	静态数组头文件
+* @brief	动态堆栈源文件
 ********************************************************************************/
 #include <stdlib.h>
 #include "dynamic_stack.h"

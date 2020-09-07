@@ -4,17 +4,15 @@
 *
 * @file  	dynaminc_stack.h
 * @author 	hongsmallgod
-* @version	V1.0.1
+* @version	V1.0.0
 * @data		2019-9-10 15:53:29
-* @brief	静态数组源文件
+* @brief	动态堆栈源文件
 ********************************************************************************/
 #ifndef _DYNAMIC_STACK_H
 #define _DYNAMIC_STACK_H
-#include <stdbool.h>
-#include "binary_tree.h"
-//typedef int element_type;
-#undef element
-#define element tree * 
+#include <stdbool.h> /* C99 */
+#include "element_definition.h"
+
 typedef struct stack {
     int top; /* 从 0 开始 */
     int size;

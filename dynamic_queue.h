@@ -4,19 +4,16 @@
 *
 * @file  	dynamic_queue.h
 * @author 	hongsmallgod
-* @version	V1.0.1
+* @version	V1.0.0
 * @data		2019-9-10 10:31:28
-* @brief	动态数组头文件
+* @brief	动态队列头文件
 ********************************************************************************/
 #ifndef _DYNAMIC_QUEUE_H
 #define _DYNAMIC_QUEUE_H
+#include "element_definition.h"
 #define TAIL  0 /* 若队列不空，尾指针指向队列尾元素的下一个位置 */
 #define TAIL1 1 /* 若队列不空，尾指针指向队列尾元素 */
 #define dynamic_array_queue  TAIL1
-#include "tree_define.h"
-
-//typedef int element; /* 队列元素类型 */
-typedef tree*  element; /* 队列元素类型 */
 typedef struct queue queue;
 struct queue {
     int front;

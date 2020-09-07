@@ -3,13 +3,13 @@
 #include "single_linked_list.h" /* For element、node  */
 
 /*
-** function  : sll_insert1
+** function  : sll_insert_ascending_same_no
 ** author	 : hongsmallgod
 ** brief     : 升序单链表插入函数, 如果链表中有相同的值, 不进行插入
 ** argument  : @head: 头结点指针; @data: 关键值
 ** return 	 : 1: 插入成功; -1: 内存不足; 0:链表当中有相同的内容
-*/
-int sll_insert1(node *head, element data)
+*///应该还有一个入参检测
+int sll_insert_ascending_same_no(node *head, element data)
 {
     node *current = head;
     node *new = (node *)malloc(sizeof(node));
@@ -33,7 +33,7 @@ int sll_insert1(node *head, element data)
 ** brief     : 升序单链表插入函数, 如果链表中有相同的值, 插入到最后
 ** argument  : @head: 头结点指针; @data: 关键值
 ** return 	 : 1: 删除成功; -1: 内存不足;
-*/
+*///如果传入了一个空指针，怎么办，这样子函数会出错的，函数需要修改
 int sll_insert2(node *head, element data)
 {
     node *current = head;

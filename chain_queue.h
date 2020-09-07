@@ -4,17 +4,14 @@
 *
 * @file     chain_queue.h
 * @author   hongsmallgod
-* @version  V1.0.1
+* @version  V1.0.0
 * @data     2019-9-10 10:31:28
-* @brief    动态数组头文件
+* @brief    链式动态队列头文件
 ********************************************************************************/
 #ifndef _CHAIN_QUEUE_H
 #define _CHAIN_QUEUE_H
+#include "element_definition.h"
 #include "single_linked_list.h"
-#include "binary_tree.h"
-
-#undef element
-#define element tree * 
 
 typedef struct queue queue;
 struct queue {

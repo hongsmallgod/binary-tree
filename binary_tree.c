@@ -1,19 +1,20 @@
+/********************************************************************************
+* Copyright(c) 2019-20xx
+* All right resered.
+*
+* @file     binary_tree.c
+* @author   hongsmallgod
+* @version  V1.0.1
+* @data     2019-9-17 10:29:20
+* @brief    二叉树源文件
+********************************************************************************/
+
 #include <stdio.h>       /* FOR scanf() */
 #include <stdlib.h>
 #include "binary_tree.h"
 #include "dynamic_stack.h"
 #include "chain_queue.h"
 #define MAX_STACK_SIZE 1024
-/********************************************************************************
-* Copyright(c) 2019-20xx
-* All right resered.
-*
-* @file  	binary_tree.c
-* @author 	hongsmallgod
-* @version	V1.0.1
-* @data		2019-9-17 10:29:20
-* @brief	二叉树源文件
-********************************************************************************/
 
 /*
 ** function  : create_tree

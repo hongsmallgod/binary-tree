@@ -8,9 +8,9 @@
 * @data     2019-9-10 10:31:28
 * @brief    链式队列源文件
 ********************************************************************************/
-#include <stdlib.h>
+#include <stdlib.h> // For malloc()
 #include "chain_queue.h"
-static int get_queue_elem_num(queue *);
+static int get_queue_elem_num(queue *); //关于元素 element 的定义，应该另起一个文件
 static int head(queue *, element *);
 static int tail(queue *, element *);
 static int enqueue(queue *, element);
@@ -23,25 +23,25 @@ static int empty(queue *);
 ** author	 : hongsmallgod
 ** brief     : 创建一个队列
 ** argument  : void
-** return 	 : @q: 队列指针
+** return 	 : @q: 队列指针; NULL: 队列申请失败
 */
 queue *create_queue(void)
 {
-    queue *q= (queue*)malloc(sizeof(queue));
+    queue *q= (queue*)malloc(sizeof(queue)); //为 队列结构体 申请空间
     if (q== NULL)
         return NULL;
 
     q->root = (node *)calloc(1, sizeof(node));
-    if (NULL == q->root) {
+    if (NULL == q->root) { //队列元素头指针？
         free(q);
         return NULL;
     }
 
-    q->num = get_queue_elem_num;
-    q->head = head;
-    q->tail = tail;
-    q->enqueue = enqueue;
-    q->dequeue = dequeue;
+    q->num = get_queue_elem_num; //这个是函数: 获取队列元素值
+    q->head = head; //获取队列头
+    q->tail = tail; //获取队列尾
+    q->enqueue = enqueue; // 入队
+    q->dequeue = dequeue; //出队
     q->full = full;
     q->empty = empty;
 
@@ -76,7 +76,7 @@ static int empty(queue *q)
 ** function  : enqueue
 ** author	 : hongsmallgod
 ** brief     : 入队操作
-** argument  : @q: 队列指针; @data: 入队元素
+** argument  : @q: 队列指针(头指针？); @data: 入队元素
 ** return 	 : 1: 成功; 0: 失败
 */
 static int enqueue(queue *q, element data)

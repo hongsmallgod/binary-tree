@@ -20,7 +20,7 @@ static int full(queue *);
 static int empty(queue *);
 queue *create_queue(int size)
 {
-    queue *q= (queue*)malloc(sizeof(queue));
+    queue *q= (queue*)malloc(sizeof(queue)); //申请队列结构体的空间
     if (q== NULL)
         return NULL;
     q->size  = size;

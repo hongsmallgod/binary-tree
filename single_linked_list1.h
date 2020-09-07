@@ -11,8 +11,8 @@
 #ifndef _SINGLE_LINKED_LIST_H
 #define _SINGLE_LINKED_LIST_H
 #include "element_definition.h"
-typedef struct node node;
-struct node {
+typedef struct sll_node node;
+struct sll_node {
     element data;
     node *next; 
 };
