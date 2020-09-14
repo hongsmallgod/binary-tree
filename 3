@@ -1,0 +1,101 @@
+/********************************************************************************
+* Copyright(c) 2019-20xx
+* All right resered.
+*
+* @file     single_linked_list.h
+* @author   hongsmallgod
+* @version  V1.0.0
+* @data     2019-9-10 10:31:28
+* @brief    单链表头文件
+********************************************************************************/
+#ifndef _SINGLE_LINKED_LIST_H
+#define _SINGLE_LINKED_LIST_H
+#include "element_definition.h"
+typedef struct sll_node node;
+struct sll_node {
+    element data;
+    node *next; 
+};
+/* ascending order(升序) 、descending order(降序) 、unordered(无序) */
+/****************************有头结点 -- START*********************************/
+extern int sll_insert_ascending_same_discard_has_head_node(node *head, element data);
+extern int sll_insert_ascending_same_head_has_head_node(node *head, element data);
+extern int sll_insert_ascending_same_tail_has_head_node(node *head, element data);
+
+extern int sll_insert_descending_same_discard_has_head_node(node *head, element data);
+extern int sll_insert_descending_same_head_has_head_node(node *head, element data);
+extern int sll_insert_descending_same_tail_has_head_node(node *head, element data);
+/****************************有头结点 -- END*********************************/
+/****************************无头结点 -- START*********************************/
+extern int sll_insert_ascending_same_discard_no_head_node(node **head, element data);
+extern int sll_insert_ascending_same_head_no_head_node(node **head, element data);
+extern int sll_insert_ascending_same_tail_no_head_node(node **head, element data);
+
+extern int sll_insert_descending_same_discard_no_head_node(node **head, element data);
+extern int sll_insert_descending_same_head_no_head_node(node **head, element data);
+extern int sll_insert_descending_same_tail_no_head_node(node **head, element data);
+/****************************无头结点 -- END***********************************/
+/* 没有有无头结点之分，参数只传 首元节点指针的地址  */
+extern int sll_insert_ascending_same_discard(node **head, element data);
+extern int sll_insert_ascending_same_head(node **head, element data);
+extern int sll_insert_ascending_same_tail(node **head, element data);
+
+extern int sll_insert_descending_same_discard(node **head, element data);
+extern int sll_insert_descending_same_head(node **head, element data);
+extern int sll_insert_descending_same_tail(node **head, element data);
+
+
+/****************************有头结点 -- START*********************************/
+/****************************升序 -- START*************************************/
+extern int sll_delete_ascending_same_all_has_head_node(node *head, element data);
+extern int sll_delete_ascending_same_head_has_head_node(node *head, element data);
+extern int sll_delete_ascending_same_tail_has_head_node(node *head, element data);
+/****************************升序 -- END***************************************/
+/****************************降序 -- START*************************************/
+extern int sll_delete_descending_same_all_has_head_node(node *head, element data);
+extern int sll_delete_descending_same_head_has_head_node(node *head, element data);
+extern int sll_delete_descending_same_tail_has_head_node(node *head, element data);
+/****************************降序 -- END***************************************/
+/****************************无头结点 -- START*********************************/
+/****************************升序 -- START*************************************/
+extern int sll_delete_ascending_same_all_no_head_node(node **head, element data);
+extern int sll_delete_ascending_same_head_no_head_node(node **head, element data);
+extern int sll_delete_ascending_same_tail_no_head_node(node **head, element data);
+/****************************升序 -- END***************************************/
+/****************************降序 -- START*************************************/
+extern int sll_delete_descending_same_all_no_head_node(node **head, element data);
+extern int sll_delete_descending_same_head_no_head_node(node **head, element data);
+extern int sll_delete_descending_same_tail_no_head_node(node **head, element data);
+/****************************降序 -- END***************************************/
+/****************************无头结点 -- END***********************************/
+
+/****************************兼容有无头结点两种情况 -- START*******************/
+/****************************升序 -- START*************************************/
+extern int sll_delete_ascending_same_all(node **head, element data);
+extern int sll_delete_ascending_same_head(node **head, element data);
+extern int sll_delete_ascending_same_tail(node **head, element data);
+/****************************升序 -- END***************************************/
+/****************************降序 -- START*************************************/
+extern int sll_delete_descending_same_all(node **head, element data);
+extern int sll_delete_descending_same_head(node **head, element data);
+extern int sll_delete_descending_same_tail(node **head, element data);
+/****************************降序 -- END***************************************/
+/****************************兼容有无头结点两种情况 -- END*********************/
+
+
+
+#if 0
+extern void sll_traversal(node *head);
+extern node *create_sll(void);
+extern void sll_sort(node *head);
+#endif
+extern void sll_destroy(node *head);
+extern size_t get_sll_node_num(node *head);
+
+extern int sll_delete_tail(node *head);
+extern int sll_delete_head(node *head);
+extern int sll_get_head(node *head, element *data);
+extern int sll_get_tail(node *head, element *data);
+extern int sll_get_and_delete_head(node *head, element *data);
+extern int sll_get_and_delete_tail(node *head, element *data);
+#endif
